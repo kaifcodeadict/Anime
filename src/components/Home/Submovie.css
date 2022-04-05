@@ -1,0 +1,32 @@
+.subMovieTitle {
+  font-weight: 500;
+  color: #555555;
+}
+.subMoviecontain {
+  padding: 1rem 0;
+}
+.subMovie {
+  cursor: pointer;
+  display: flex;
+  gap: 1.4rem;
+  padding: 0.4rem 0;
+}
+.subMovieImg {
+  object-fit: contain;
+  border-radius: 8px;
+  max-height: 80px;
+}
+.subMovieRate {
+  color: #555555;
+  font-size: 0.8rem;
+}
+.subMovieTexts {
+  display: flex;
+  flex-direction: column;
+}
+.btn-sub {
+  padding-top: 0.3rem;
+}
+.btn-sub i {
+  font-size: 1.2rem;
+}

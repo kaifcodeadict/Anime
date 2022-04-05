@@ -1,46 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&family=Poppins:wght@300;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&family=Poppins:wght@300;500&display=swap");
 /* variables */
 :root {
-  --sidebar-width:320px
+  --sidebar-width: 270px;
 }
-body{
-    font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 /* Global Css */
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-  html,
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html,
 body {
   height: 100%;
-
 }
 ul {
-    list-style: none;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-.Btn{
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-    border: none;
-    font-weight: 700;
-    border-radius: 0.2vw;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin-right: 1rem;
-    padding-top: 0.5rem;
-    background-color: rgba(51, 51, 51, 0.5);
-    padding-bottom: 0.5rem;
-    transition: .5s;
+  list-style: none;
 }
-.Btn:hover{
-    background-color: #fff;
-    color:  rgba(51, 51, 51, 0.5);
+
+a {
+  text-decoration: none;
+}
+.Btn {
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 0.2vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-right: 1rem;
+  padding-top: 0.5rem;
+  background-color: rgba(51, 51, 51, 0.5);
+  padding-bottom: 0.5rem;
+  transition: 0.5s;
+}
+.Btn:hover {
+  background-color: #fff;
+  color: rgba(51, 51, 51, 0.5);
 }

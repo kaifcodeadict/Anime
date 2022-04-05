@@ -1,0 +1,71 @@
+.Rightbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: var(--sidebar-width);
+  background-color: #fff;
+  border-left: 2px solid #55555515;
+}
+.sidebar__search {
+  position: relative;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid #308efe;
+  padding: 5px;
+}
+.sidebar__search input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+.sidebar__search .bx {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #07051a;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+}
+.sidebar__search:hover,
+.sidebar__search:valid {
+  width: 200px;
+  cursor: pointer;
+}
+
+.sidebar__search:hover input,
+.sidebar__search:valid input {
+  display: block;
+}
+
+.sidebar__search:hover .bx,
+.sidebar__search:valid .bx {
+  background: #308efe;
+  color: white;
+}
+
+.Rightbar__menu {
+  padding: 2rem;
+}
