@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
 import { fetchAnime } from "./../../Api/axios";
-import "./Home.css";
 import Banner from "./Banner";
 import Leftbar from "./Leftbar";
 import Rightbar from "./Rightbar";
 import Rows from "./Rows";
+import CategoriesEle from "./Categories";
 
 const Categories = [
   {
@@ -26,14 +25,17 @@ const Categories = [
 ];
 
 function Home() {
-  const [activeCat, setActiveCat] = useState(0);
   const [animes, setAnimes] = useState([]);
-  const location = useLocation();
+  var stylingObject = {
+    HomeCatgre: {
+      marginLeft: "var(--sidebar-width)",
+      padding: "2rem 1rem 0rem 1.5rem",
+    },
+  };
   useEffect(() => {
     try {
       async function fetchMyAnime() {
         const { data } = await fetchAnime();
-
         setAnimes(data);
       }
       fetchMyAnime();
@@ -42,26 +44,11 @@ function Home() {
     }
   }, []);
 
-  useEffect(() => {
-    const curPath = window.location.pathname.split("/")[1];
-    const activeCat = Categories.findIndex((item) => item.section === curPath);
-    setActiveCat(curPath.length === 0 || activeCat < 0 ? 1 : activeCat);
-  }, [location]);
-
   return (
     <>
       <Leftbar />
       <Rightbar Animes={animes} />
-
-      <div className="categories">
-        {Categories.map((item, index) => (
-          <Link to={item.to} key={index}>
-            <span className={activeCat === index ? "activeCat" : ""}>
-              {item.display}
-            </span>
-          </Link>
-        ))}
-      </div>
+      <CategoriesEle Categories={Categories} Style={stylingObject.HomeCatgre} />
 
       <Banner Animes={animes} />
       <Rows

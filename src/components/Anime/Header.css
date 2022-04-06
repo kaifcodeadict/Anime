@@ -1,0 +1,67 @@
+.Header {
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #55555515;
+  display: flex;
+  justify-content: space-between;
+}
+.anime__logo {
+  display: grid;
+  font-size: 1.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  font-weight: 700;
+}
+.anime__logo i {
+  color: #308efe;
+}
+.headerLeft,
+.headerRight {
+  display: grid;
+  /* align-items: center; */
+  align-items: center;
+}
+.headerLeft {
+  grid-template-columns: 150px 1fr;
+  gap: 0rem;
+}
+.headerRight {
+  grid-template-columns: 1fr 40px 40px;
+  gap: 1.5rem;
+}
+.bellIcon i {
+  font-size: 2rem;
+}
+.bellIcon {
+  display: block;
+  cursor: pointer;
+}
+.bellIcon::before {
+  content: "";
+  position: absolute;
+  padding-left: 2rem;
+  clip-path: circle();
+  height: 0.8rem;
+  width: 0.8rem;
+  background-color: #308efe;
+}
+.profile {
+  cursor: pointer;
+}
+.profile img {
+  /* border-radius: 50%; */
+  max-width: 32px;
+  height: auto;
+  clip-path: circle();
+}
+.profile::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 7px solid #000;
+}
