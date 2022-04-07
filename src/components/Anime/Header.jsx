@@ -36,7 +36,7 @@ function Header() {
             <i className="bx bx-search"></i>
           </div>
           <div className="bellIcon">
-            <i className="bx bx-bell" />
+            <i className="bx bxs-bell" />
           </div>
           <div className="profile">
             <img

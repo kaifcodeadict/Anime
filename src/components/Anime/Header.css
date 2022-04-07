@@ -5,11 +5,12 @@
   justify-content: space-between;
 }
 .anime__logo {
+  cursor: pointer;
   display: grid;
   font-size: 1.9rem;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 1rem;
   font-weight: 700;
 }

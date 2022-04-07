@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import "./Rightbar.css";
 import Submovie from "./Submovie";
+import { Skeleton } from "@mui/material";
 
-const Sidebar = ({ Animes }) => {
+const Sidebar = ({ Animes, isLoading = false }) => {
   const [popular, setPopular] = useState([]);
   const [favorites, setFavorites] = useState([]);
 
@@ -20,13 +21,32 @@ const Sidebar = ({ Animes }) => {
 
   return (
     <div className="Rightbar">
-      <div className="sidebar__search">
-        <input type="search" placeholder="Search" required />
-        <i className="bx bx-search"></i>
-      </div>
+      {isLoading ? (
+        <Skeleton
+          variant="circular"
+          animation="wave"
+          height={40}
+          width={40}
+          className={"sidebar__search"}
+          style={{ border: "none" }}
+        />
+      ) : (
+        <div className="sidebar__search">
+          <input type="search" placeholder="Search" required />
+          <i className="bx bx-search"></i>
+        </div>
+      )}
       <div className="Rightbar__menu">
-        <Submovie Movies={popular} Title={"Popular Movies"} />
-        <Submovie Movies={favorites} Title={"Favorites"} />
+        <Submovie
+          Movies={popular}
+          Title={"Popular Movies"}
+          isLoading={isLoading}
+        />
+        <Submovie
+          Movies={favorites}
+          Title={"Favorites"}
+          isLoading={isLoading}
+        />
       </div>
     </div>
   );
