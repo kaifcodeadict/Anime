@@ -1,10 +1,9 @@
 # To Run This Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Directly
 
-Open https://animedemo555.netlify.app/series to view it in your browser.
+Open https://animedemo555.netlify.app/ to view it in your browser.
 
 ### Manually
 
