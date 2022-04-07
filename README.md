@@ -19,7 +19,7 @@ $ npm install
 
 This installs the required dependencies
 
-To run the React project.
+To run the this project type.
 $ npm start
 
 Open http://localhost:3000 to view it in your browser.
